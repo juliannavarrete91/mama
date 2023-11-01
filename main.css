@@ -1,0 +1,105 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos del encabezado (imagen) */
+header {
+    position: relative;
+}
+
+header img {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos del menú hamburguesa */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #3498db;
+    margin: 6px 0;
+}
+
+/* Estilos del contenido (título y menú) */
+.content {
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.menu {
+    display: none;
+    text-align: center;
+}
+
+.menu nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu nav ul li {
+    margin: 0;
+}
+
+.menu nav ul li a {
+    text-decoration: none;
+    padding: 5px 10px;
+    display: block;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 767px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .content {
+        margin-top: 50px;
+    }
+
+    .menu {
+        position: absolute;
+        top: 70px;
+        right: 20px;
+    }
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 768px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .content {
+        margin-top: 0;
+    }
+
+    .menu {
+        display: block;
+        position: static;
+        top: 0;
+        right: 0;
+    }
+}
